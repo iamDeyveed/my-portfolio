@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | David Ubakaibeya - YaGazie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-brand" href="./index.html">David Ubakaibeya</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link nav-link-active" href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="contact-shell">
+      <section class="contact-layout">
+        <aside class="contact-sidebar">
+          <div class="contact-block">
+            <p class="contact-label">Contact Info</p>
+
+            <div class="info-card">
+              <div class="info-icon">✉</div>
+              <div>
+                <p class="info-title">Mail Us</p>
+                <a class="info-link" href="mailto:hello@davidubakaibeya.com">
+                  hello@davidubakaibeya.com
+                </a>
+                <a class="info-link" href="mailto:bookings@davidubakaibeya.com">
+                  bookings@davidubakaibeya.com
+                </a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">☏</div>
+              <div>
+                <p class="info-title">Call Us</p>
+                <a class="info-link" href="tel:+15048998221">+1 504-899-8221</a>
+                <a class="info-link" href="tel:+15047495456">+1 504-749-5456</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">⌂</div>
+              <div>
+                <p class="info-title">Location</p>
+                <p class="info-copy">Lagos, Nigeria</p>
+                <p class="info-copy">Available worldwide</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <p class="contact-label">Social Info</p>
+
+            <div class="social-row">
+              <a class="social-link" href="https://instagram.com/" target="_blank" rel="noreferrer">
+                IG
+              </a>
+              <a class="social-link" href="https://x.com/" target="_blank" rel="noreferrer">
+                X
+              </a>
+              <a class="social-link" href="https://linkedin.com/" target="_blank" rel="noreferrer">
+                IN
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <section class="contact-panel">
+          <p class="contact-kicker">Contact</p>
+          <h1 class="contact-title">
+            Let’s work <span>together.</span>
+          </h1>
+
+          <form class="contact-form" action="mailto:hello@davidubakaibeya.com" method="post" enctype="text/plain">
+            <input class="field" type="text" name="name" placeholder="Name *" required />
+            <input class="field" type="email" name="email" placeholder="Email *" required />
+            <input class="field" type="text" name="subject" placeholder="Your Subject *" required />
+            <textarea class="field field-area" name="message" placeholder="Your Message *" required></textarea>
+            <button class="button button-primary button-submit" type="submit">
+              Send Message
+            </button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
