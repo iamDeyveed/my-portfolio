@@ -821,12 +821,27 @@ img {
     padding: 72px 0;
   }
 
+  .section-heading-row {
+    margin-bottom: 28px;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
   .gallery-track {
     gap: 14px;
+    width: max-content;
+    animation: galleryMarquee 28s linear infinite;
+  }
+
+  .gallery-carousel {
+    overflow: hidden;
+    padding: 4px 0;
   }
 
   .gallery-card {
-    flex-basis: 78vw;
+    flex: 0 0 min(82vw, 320px);
     min-height: 320px;
   }
 
