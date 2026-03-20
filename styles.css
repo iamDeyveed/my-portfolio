@@ -34,6 +34,12 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: transform 300ms ease, filter 300ms ease, opacity 300ms ease;
+}
+
+body.page-clicked {
+  transform: scale(0.995);
+  filter: saturate(1.06);
 }
 
 body::before,
@@ -96,6 +102,10 @@ img {
   text-decoration: none;
 }
 
+.site-brand span {
+  color: var(--accent);
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -103,6 +113,8 @@ img {
 }
 
 .nav-link {
+  position: relative;
+  overflow: hidden;
   font-family: "Instrument Sans", Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
@@ -110,13 +122,18 @@ img {
   text-decoration: none;
   padding: 10px 14px;
   border-radius: 4px;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition: color 180ms ease, background-color 180ms ease, transform 220ms ease;
 }
 
 .nav-link:hover,
 .nav-link:focus-visible {
   color: var(--text);
   background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-link:active,
+.nav-link.is-pressed {
+  transform: translateY(1px) scale(0.98);
 }
 
 .nav-cta {
@@ -228,6 +245,8 @@ img {
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -239,12 +258,42 @@ img {
   font-size: 0.98rem;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 180ms ease, filter 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .button:hover,
 .button:focus-visible {
   transform: translateY(-1px);
+}
+
+.button:active,
+.button.is-pressed,
+.support-button:active,
+.support-button.is-pressed {
+  transform: translateY(1px) scale(0.975);
+}
+
+.button::after,
+.support-button::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 48%);
+  opacity: 0;
+  transform: scale(0.35);
+  transition: transform 320ms ease, opacity 320ms ease;
+  pointer-events: none;
+}
+
+.button.is-pressed::after,
+.support-button.is-pressed::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .button-primary {
@@ -404,6 +453,12 @@ img {
   border: 1px solid var(--border);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  transition: transform 260ms ease, border-color 260ms ease, background-color 260ms ease;
+}
+
+.hire-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
 }
 
 .hire-card-summary {
@@ -413,6 +468,7 @@ img {
   gap: 16px;
   list-style: none;
   cursor: pointer;
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hire-card-summary::-webkit-details-marker {
@@ -436,7 +492,7 @@ img {
   font-size: 1.5rem;
   line-height: 1;
   color: var(--accent);
-  transition: transform 180ms ease;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hire-card[open] .hire-card-summary::after {
@@ -451,9 +507,21 @@ img {
 }
 
 .hire-card-content {
+  height: 0;
+  overflow: hidden;
   margin-top: 18px;
-  padding-top: 18px;
+  padding-top: 0;
   border-top: 1px solid var(--border);
+  opacity: 0;
+  transition:
+    height 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 280ms ease,
+    padding-top 320ms ease;
+}
+
+.hire-card[open] .hire-card-content {
+  opacity: 1;
+  padding-top: 18px;
 }
 
 .hire-card p {
@@ -510,18 +578,6 @@ img {
   pointer-events: none;
 }
 
-.final-cta-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 120px;
-  background: linear-gradient(to top, var(--accent), transparent);
-  opacity: 0.12;
-}
-
 .final-cta-content {
   position: relative;
   z-index: 1;
@@ -555,7 +611,7 @@ img {
 }
 
 .support-footer-section {
-  padding: 0 0 36px;
+  padding: 0;
   background: transparent;
 }
 
@@ -565,40 +621,47 @@ img {
   justify-content: center;
   gap: 26px;
   min-height: 84px;
-  background: rgba(0, 0, 0, 0.82);
-  border-top: 1px solid rgba(200, 255, 50, 0.06);
 }
 
 .support-label {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 1rem;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 500;
   line-height: 1.2;
   color: var(--text);
 }
 
 .support-button {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 36px;
   padding: 8px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid transparent;
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--accent);
   font-family: "Instrument Sans", Arial, sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--bg);
   text-decoration: none;
-  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  box-shadow: 0 10px 24px rgba(200, 255, 50, 0.16);
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease;
 }
 
 .support-button:hover,
 .support-button:focus-visible {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.22);
+  background: #d3ff58;
+  border-color: transparent;
   transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(200, 255, 50, 0.24);
 }
 
 .final-cta-proof {
@@ -794,10 +857,6 @@ img {
     padding: 28px 22px;
   }
 
-  .support-footer-section {
-    padding-bottom: 24px;
-  }
-
   .support-footer-inner {
     width: 100%;
     justify-content: space-between;
@@ -828,8 +887,16 @@ img {
     animation: none;
   }
 
+  body {
+    transition: none;
+  }
+
   .button,
   .nav-link,
+  .hire-card,
+  .hire-card-summary::after,
+  .hire-card-content,
+  .support-button,
   .contact-links a,
   .field,
   .nav-toggle-button span {

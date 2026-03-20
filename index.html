@@ -15,7 +15,7 @@
   <body>
     <header class="site-header">
       <div class="container site-header-inner">
-        <a class="site-brand" href="./index.html">YaGazie.</a>
+        <a class="site-brand" href="./index.html">Ya<span>Ga</span>zie.</a>
         <button
           class="nav-toggle-button"
           type="button"
@@ -338,6 +338,26 @@
       const navButton = document.querySelector(".nav-toggle-button");
       const siteNav = document.querySelector(".site-nav");
       const navLinks = document.querySelectorAll(".site-nav .nav-link");
+      const hireCards = document.querySelectorAll(".hire-card");
+      const interactiveElements = document.querySelectorAll(
+        ".button, .nav-link, .support-button, .hire-card-summary"
+      );
+
+      interactiveElements.forEach((element) => {
+        const releasePress = () => {
+          element.classList.remove("is-pressed");
+          document.body.classList.remove("page-clicked");
+        };
+
+        element.addEventListener("pointerdown", () => {
+          element.classList.add("is-pressed");
+          document.body.classList.add("page-clicked");
+        });
+
+        element.addEventListener("pointerup", releasePress);
+        element.addEventListener("pointerleave", releasePress);
+        element.addEventListener("blur", releasePress);
+      });
 
       if (navButton && siteNav) {
         navButton.addEventListener("click", () => {
@@ -352,6 +372,59 @@
           });
         });
       }
+
+      hireCards.forEach((card) => {
+        const summary = card.querySelector(".hire-card-summary");
+        const content = card.querySelector(".hire-card-content");
+
+        if (!summary || !content) {
+          return;
+        }
+
+        if (card.open) {
+          content.style.height = content.scrollHeight + "px";
+        } else {
+          content.style.height = "0px";
+        }
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const isOpening = !card.open;
+
+          if (isOpening) {
+            card.open = true;
+            const targetHeight = content.scrollHeight;
+            content.style.height = "0px";
+
+            window.requestAnimationFrame(() => {
+              content.style.height = targetHeight + "px";
+            });
+          } else {
+            const startHeight = content.scrollHeight;
+            content.style.height = startHeight + "px";
+
+            window.requestAnimationFrame(() => {
+              content.style.height = "0px";
+            });
+          }
+        });
+
+        content.addEventListener("transitionend", (event) => {
+          if (event.propertyName !== "height") {
+            return;
+          }
+
+          if (card.open && content.style.height !== "0px") {
+            content.style.height = "auto";
+            return;
+          }
+
+          if (content.style.height === "0px") {
+            card.open = false;
+          }
+        });
+      });
 
     </script>
   </body>
