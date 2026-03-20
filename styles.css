@@ -555,33 +555,48 @@ img {
 }
 
 .support-card {
-  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  width: fit-content;
   margin: 28px auto 0;
-  padding: 22px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 18px 28px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
 }
 
 .support-label {
   margin: 0;
-  font-family: "Instrument Sans", Arial, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.support-copy {
-  margin: 12px 0 0;
-  font-size: 0.96rem;
-  line-height: 1.7;
-  color: var(--text-soft);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--text);
 }
 
 .support-button {
-  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.support-button:hover,
+.support-button:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
 }
 
 .final-cta-proof {
@@ -775,6 +790,24 @@ img {
 
   .thank-you-panel {
     padding: 28px 22px;
+  }
+
+  .support-card {
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .support-label {
+    font-size: 0.95rem;
+  }
+
+  .support-button {
+    width: auto;
+    min-height: 34px;
+    padding: 8px 14px;
+    font-size: 0.78rem;
   }
 }
 
