@@ -554,17 +554,19 @@ img {
   margin-top: 34px;
 }
 
-.support-card {
+.support-footer-section {
+  padding: 0 0 36px;
+  background: transparent;
+}
+
+.support-footer-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px;
-  width: fit-content;
-  margin: 28px auto 0;
-  padding: 18px 28px;
-  background: rgba(0, 0, 0, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 0;
+  gap: 26px;
+  min-height: 84px;
+  background: rgba(0, 0, 0, 0.82);
+  border-top: 1px solid rgba(200, 255, 50, 0.06);
 }
 
 .support-label {
@@ -792,11 +794,16 @@ img {
     padding: 28px 22px;
   }
 
-  .support-card {
+  .support-footer-section {
+    padding-bottom: 24px;
+  }
+
+  .support-footer-inner {
     width: 100%;
     justify-content: space-between;
-    padding: 16px 18px;
     gap: 14px;
+    min-height: 72px;
+    padding: 0 18px;
   }
 
   .support-label {
