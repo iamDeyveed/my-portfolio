@@ -554,10 +554,74 @@ img {
   margin-top: 34px;
 }
 
+.support-card {
+  max-width: 420px;
+  margin: 28px auto 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.support-label {
+  margin: 0;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.support-copy {
+  margin: 12px 0 0;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+.support-button {
+  margin-top: 18px;
+}
+
 .final-cta-proof {
   margin: 14px 0 0;
   font-size: 0.95rem;
   color: var(--text-muted);
+}
+
+.thank-you-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.thank-you-panel {
+  width: min(640px, 100%);
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.thank-you-title {
+  margin: 0;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+}
+
+.thank-you-copy {
+  max-width: 500px;
+  margin: 18px auto 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-soft);
 }
 
 .reveal {
@@ -707,6 +771,10 @@ img {
 
   .button {
     width: 100%;
+  }
+
+  .thank-you-panel {
+    padding: 28px 22px;
   }
 }
 
