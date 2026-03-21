@@ -9,11 +9,11 @@
   --text: #ffffff;
   --text-soft: rgba(255, 255, 255, 0.68);
   --text-muted: rgba(255, 255, 255, 0.4);
-  --accent: #c8ff32;
-  --accent-bg: rgba(200, 255, 50, 0.08);
-  --accent-border: rgba(200, 255, 50, 0.16);
+  --accent: #00ff00;
+  --accent-bg: rgba(0, 255, 0, 0.08);
+  --accent-border: rgba(0, 255, 0, 0.16);
   --glow-wine: rgba(120, 40, 90, 0.18);
-  --glow-green: rgba(200, 255, 50, 0.08);
+  --glow-green: rgba(0, 255, 0, 0.08);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
 }
 
@@ -61,7 +61,7 @@ body::before {
 body::after {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%),
-    linear-gradient(140deg, transparent 62%, rgba(200, 255, 50, 0.035));
+    linear-gradient(140deg, transparent 62%, rgba(0, 255, 0, 0.035));
 }
 
 a {
@@ -144,7 +144,7 @@ img {
 .nav-cta:hover,
 .nav-cta:focus-visible {
   color: var(--bg);
-  background: #d3ff58;
+  background: #00ff00;
 }
 
 .nav-toggle-button {
@@ -658,10 +658,10 @@ img {
 
 .support-button:hover,
 .support-button:focus-visible {
-  background: #d3ff58;
+  background: #00ff00;
   border-color: transparent;
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(200, 255, 50, 0.24);
+  box-shadow: 0 14px 30px rgba(0, 255, 0, 0.24);
 }
 
 .final-cta-proof {
