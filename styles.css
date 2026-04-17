@@ -204,8 +204,9 @@ img {
 }
 
 .hero-title,
-.section-title {
-  font-family: "Instrument Serif", Georgia, serif;
+.section-title,
+.final-cta-title {
+  font-family: "Instrument Serif", serif;
   font-weight: 400;
   letter-spacing: -0.05em;
 }
@@ -430,7 +431,8 @@ img {
 
 .gallery-card figcaption strong,
 .process-card h3 {
-  font-family: "Instrument Sans", Arial, sans-serif;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.35;
@@ -513,7 +515,8 @@ img {
 
 .website-card h3 {
   margin: 0;
-  font-family: "Instrument Sans", Arial, sans-serif;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
   font-size: 1.35rem;
   font-weight: 700;
   line-height: 1.2;
@@ -590,7 +593,8 @@ img {
 
 .hire-card h3 {
   margin: 0;
-  font-family: "Instrument Sans", Arial, sans-serif;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
   font-size: 1.18rem;
   line-height: 1.35;
 }
@@ -675,7 +679,6 @@ img {
 
 .final-cta-title {
   margin: 0;
-  font-family: "Instrument Serif", Georgia, serif;
   font-size: clamp(2.8rem, 5vw, 4.2rem);
   font-weight: 400;
   line-height: 1.08;
