@@ -436,6 +436,95 @@ img {
   line-height: 1.35;
 }
 
+.website-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.website-card {
+  display: grid;
+  gap: 22px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.website-card-preview {
+  position: relative;
+  min-height: 290px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.06));
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.website-card-iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1440px;
+  height: 810px;
+  transform-origin: top center;
+  transform: translateX(-50%) scale(0.35);
+  border: 0;
+  background: var(--bg);
+}
+
+.website-card-screenshot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(13, 10, 18, 0.95), rgba(25, 22, 34, 0.9));
+  border-radius: 12px;
+  text-align: center;
+}
+
+.website-card-screenshot p {
+  margin: 0;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+}
+
+.website-card-copy {
+  display: grid;
+  gap: 16px;
+}
+
+.website-card-tag {
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+.website-card h3 {
+  margin: 0;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.website-card p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
 .hire-heading-row {
   align-items: start;
 }
@@ -761,6 +850,9 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .website-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -807,6 +899,14 @@ img {
 
   .hero {
     padding: 86px 0 68px;
+  }
+
+  .website-card-preview {
+    min-height: 240px;
+  }
+
+  .website-card-iframe {
+    transform: translateX(-50%) scale(0.28);
   }
 
   .hero-title {
