@@ -7,463 +7,149 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container site-header-inner">
-        <a class="site-brand" href="./index.html">Ya<span>Ga</span>zie.</a>
-        <button
-          class="nav-toggle-button"
-          type="button"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" id="site-nav" aria-label="Primary">
-          <a class="nav-link" href="#top">Home</a>
-          <a class="nav-link" href="#gallery">Gallery</a>
-          <a class="nav-link" href="#process">Process</a>
-          <a class="nav-link nav-cta" href="#contact">Let&apos;s Work</a>
-        </nav>
-      </div>
-    </header>
+    <main class="portfolio-screen" id="top">
+      <nav class="browser-bar" aria-label="Portfolio navigation">
+        <a href="#top">yagazie.design</a>
+        <a href="#work">work</a>
+        <a href="#contact">contact</a>
+      </nav>
 
-    <main id="top">
-      <section class="hero">
-        <div class="container hero-content">
-          <h1 class="hero-title reveal reveal-d1">
-            I design visuals and build websites for fintech, web3, and startups
-          </h1>
+      <section class="profile-panel" aria-labelledby="portfolio-title">
+        <div class="intro">
+          <img
+            class="avatar"
+            src="./images/1b7be13ab9ce5f5d8858e226660b84c3.jpg"
+            alt="Portrait artwork for YaGazie"
+          />
 
-          <p class="hero-subtitle reveal reveal-d2">
-            Clean, bold, and sometimes a little extra — in design and web development.
-          </p>
+          <div class="intro-copy">
+            <p class="eyebrow">Visual designer and web developer</p>
+            <h1 id="portfolio-title">
+              Hi I&apos;m David Ubakaibeya - I design visuals and build sharp websites for
+              fintech, web3, and startups.
+            </h1>
+            <p>
+              Clean, bold, and sometimes a little extra. I help modern brands
+              look more expensive, intentional, and ready to sell.
+            </p>
+          </div>
 
-          <div class="hero-actions reveal reveal-d3">
-            <a class="button button-primary" href="./portfolioo.pdf" download>
-              Download Portfolio
+          <div class="intro-actions" aria-label="Primary actions">
+            <a class="sound-button" href="./portfolioo.pdf" download>
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="wave" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </span>
+              <span>Portfolio</span>
             </a>
-            <a class="button button-secondary" href="./resume.pdf" download>
-              Download Resume
+            <a class="status-pill" href="./resume.pdf" download>
+              <span aria-hidden="true"></span>
+              Available for work
             </a>
           </div>
         </div>
-      </section>
 
-      <section class="section intro-section">
-        <div class="container section-grid">
-          <div>
-            <p class="section-tag">About</p>
-            <h2 class="section-title">Design that helps a brand feel more expensive, intentional, and alive.</h2>
-          </div>
-          <div class="section-copy">
-            <p>
-              My work sits between clean structure and high-impact visuals. I
-              build assets and websites for launches, social campaigns, and
-              digital brands that want more than safe design.
-            </p>
-            <p>
-              If you need visuals and web experiences that feel current without
-              feeling generic, that&apos;s where I do my best work.
-            </p>
-          </div>
-        </div>
-      </section>
+        <div class="card-grid" id="work">
+          <article class="mini-card timeline-card">
+            <span class="card-kicker">Experience</span>
+            <ol>
+              <li>
+                <time>2026</time>
+                <strong>Fintech launch visuals</strong>
+              </li>
+              <li>
+                <time>2025</time>
+                <strong>Web3 brand systems</strong>
+              </li>
+              <li>
+                <time>2024</time>
+                <strong>Startup websites</strong>
+              </li>
+            </ol>
+          </article>
 
-      <section id="gallery" class="section gallery-section">
-        <div class="container">
-          <p class="section-tag">Selected Work</p>
-          <div class="section-heading-row">
-            <h2 class="section-title">A few visuals from recent design directions.</h2>
-            <p class="section-desc">Campaign pieces, art-driven concepts, and brand visuals with a strong editorial edge.</p>
-          </div>
-
-          <div class="gallery-carousel">
-            <div class="gallery-track">
-              <figure class="gallery-card">
-                <img src="./images/stackko-1080x1080.png" alt="Stackko campaign visual" />
-                <figcaption>
-                  <span>Campaign Visual</span>
-                  <strong>Stackko launch direction</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card">
-                <img src="./images/SCHOLARSS 1.png" alt="Scholars design artwork" />
-                <figcaption>
-                  <span>Brand Artwork</span>
-                  <strong>Scholars poster frame</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card">
-                <img src="./images/zypp rebranded 1.png" alt="Zypp rebrand concept" />
-                <figcaption>
-                  <span>Rebrand Concept</span>
-                  <strong>Zypp visual refresh</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card">
-                <img src="./images/4fe0191736bbc3689efada9ffd63d6f8.jpg" alt="Square design artwork one" />
-                <figcaption>
-                  <span>Art Direction</span>
-                  <strong>Graphic composition study</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card">
-                <img src="./images/ca6d3da9320bad679f702a71c32c9502.jpg" alt="Square design artwork two" />
-                <figcaption>
-                  <span>Visual Study</span>
-                  <strong>Poster-inspired layout</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card" aria-hidden="true">
-                <img src="./images/stackko-1080x1080.png" alt="" />
-                <figcaption>
-                  <span>Campaign Visual</span>
-                  <strong>Stackko launch direction</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card" aria-hidden="true">
-                <img src="./images/SCHOLARSS 1.png" alt="" />
-                <figcaption>
-                  <span>Brand Artwork</span>
-                  <strong>Scholars poster frame</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card" aria-hidden="true">
-                <img src="./images/zypp rebranded 1.png" alt="" />
-                <figcaption>
-                  <span>Rebrand Concept</span>
-                  <strong>Zypp visual refresh</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card" aria-hidden="true">
-                <img src="./images/4fe0191736bbc3689efada9ffd63d6f8.jpg" alt="" />
-                <figcaption>
-                  <span>Art Direction</span>
-                  <strong>Graphic composition study</strong>
-                </figcaption>
-              </figure>
-
-              <figure class="gallery-card" aria-hidden="true">
-                <img src="./images/ca6d3da9320bad679f702a71c32c9502.jpg" alt="" />
-                <figcaption>
-                  <span>Visual Study</span>
-                  <strong>Poster-inspired layout</strong>
-                </figcaption>
-              </figure>
+          <article class="wide-card project-player">
+            <span class="card-kicker">Now featuring</span>
+            <img src="./images/stackko-1080x1080.png" alt="Stackko launch artwork" />
+            <div>
+              <h2>Stackko launch direction</h2>
+              <p>Campaign visuals, sharp composition, and brand-ready social assets.</p>
+              <div class="progress-bar" aria-hidden="true"><span></span></div>
+              <div class="player-controls" aria-hidden="true">
+                <b></b><b></b><b></b>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <section id="websites" class="section websites-section">
-        <div class="container">
-          <p class="section-tag">Web Development</p>
-          <div class="section-heading-row">
-            <h2 class="section-title">Live websites with homepage previews and polished UI.</h2>
-            <p class="section-desc">Explore homepage previews for two recent web projects built with polished interactions and modern layout.</p>
-          </div>
+          <a
+            class="mini-card reading-card"
+            href="https://greaa.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="card-kicker">Live website</span>
+            <h2>Greaa</h2>
+            <p>Homepage preview and polished web interface.</p>
+          </a>
 
-          <div class="website-grid">
-            <article class="website-card">
-              <div class="website-card-preview">
-                <iframe class="website-card-iframe" src="https://greaa.vercel.app/" title="Greaa homepage preview" loading="lazy" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-              </div>
+          <a
+            class="mini-card reading-card jesse-card"
+            href="https://www.jessefarms.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="card-kicker">Live website</span>
+            <h2>Jesse Farms</h2>
+            <p>Farm brand website with a clean, customer-ready web presence.</p>
+          </a>
 
-              <div class="website-card-copy">
-                <p class="website-card-tag">Live website</p>
-                <h3>Greaa</h3>
-                <p>A polished site with a clear brand direction, responsive layout, and strong visual hierarchy.</p>
-                <a class="button button-secondary" href="https://greaa.vercel.app/" target="_blank" rel="noreferrer">Visit live site</a>
-              </div>
-            </article>
+          <article class="image-card map-card">
+            <img src="./images/zypp rebranded 1.png" alt="Zypp rebrand concept" />
+            <div>
+              <span>Brand refresh</span>
+              <strong>Zypp</strong>
+            </div>
+          </article>
 
-            <article class="website-card">
-              <div class="website-card-preview">
-                <iframe class="website-card-iframe" src="https://yagazie.vercel.app/" title="YaGazie homepage preview" loading="lazy" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
-              </div>
+          <article class="image-card photo-card">
+            <img src="./images/SCHOLARSS 1.png" alt="Scholars poster design" />
+            <div>
+              <span>Poster frame</span>
+              <strong>Scholars</strong>
+            </div>
+          </article>
 
-              <div class="website-card-copy">
-                <p class="website-card-tag">Live website</p>
-                <h3>YaGazie</h3>
-                <p>Built to showcase branding and digital presence with a sleek interface and strong storytelling touchpoints.</p>
-                <a class="button button-secondary" href="https://yagazie.vercel.app/" target="_blank" rel="noreferrer">Visit live site</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section hire-section">
-        <div class="container">
-          <div class="section-heading-row hire-heading-row">
-            <h2 class="section-title">Why you should hire me.</h2>
-            <p class="section-desc">
-              I bring strong taste, clear thinking, and execution that helps
-              brands look sharper, more confident, and more ready to sell.
+          <article class="wide-card call-card" id="contact">
+            <span class="card-kicker">Next step</span>
+            <h2>01 Discovery Call</h2>
+            <p>
+              We will shape a clear direction for your brand, campaign, or
+              website before the design work starts.
             </p>
-          </div>
-
-          <div class="hire-grid">
-            <details class="hire-card" open>
-              <summary class="hire-card-summary">
-                <span class="hire-card-tag">01</span>
-                <h3>Fast, High-Quality Delivery</h3>
-              </summary>
-              <div class="hire-card-content">
-                <p>
-                  You don&apos;t need to spend days or weeks waiting for your
-                  designs. I deliver quickly without compromising on quality, so
-                  you can launch, promote, and grow your brand faster.
-                </p>
-                <p>
-                  Every project is handled with speed, precision, and attention
-                  to detail, giving you results that look as good as they
-                  perform.
-                </p>
-              </div>
-            </details>
-
-            <details class="hire-card">
-              <summary class="hire-card-summary">
-                <span class="hire-card-tag">02</span>
-                <h3>Design That Actually Converts</h3>
-              </summary>
-              <div class="hire-card-content">
-                <p>
-                  This isn&apos;t just about making things look good. It&apos;s
-                  about getting results. Every design is created with a clear
-                  goal: to attract attention, communicate value, and drive
-                  action.
-                </p>
-                <p>
-                  Whether it&apos;s a flyer, product, or UI, I design with
-                  strategy so your audience doesn&apos;t just see it, they
-                  respond to it.
-                </p>
-              </div>
-            </details>
-
-            <details class="hire-card">
-              <summary class="hire-card-summary">
-                <span class="hire-card-tag">03</span>
-                <h3>Clear Communication, No Stress</h3>
-              </summary>
-              <div class="hire-card-content">
-                <p>
-                  You won&apos;t be left guessing or chasing updates. I keep
-                  communication simple, clear, and consistent throughout the
-                  project.
-                </p>
-                <p>
-                  From start to finish, you&apos;ll always know what&apos;s
-                  happening, what&apos;s next, and when to expect delivery.
-                </p>
-              </div>
-            </details>
-
-            <details class="hire-card">
-              <summary class="hire-card-summary">
-                <span class="hire-card-tag">04</span>
-                <h3>Built for Modern Brands</h3>
-              </summary>
-              <div class="hire-card-content">
-                <p>
-                  I understand what works today, whether it&apos;s social media,
-                  fintech, or Web3. Your designs won&apos;t feel outdated or
-                  generic.
-                </p>
-                <p>
-                  Everything is crafted to match modern trends, digital
-                  behavior, and your brand&apos;s unique identity so you stand
-                  out, not blend in.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section id="process" class="section process-section">
-        <div class="container">
-          <p class="section-tag">Process</p>
-          <div class="section-heading-row">
-            <h2 class="section-title">How I shape visuals that feel clear, premium, and memorable.</h2>
-            <p class="section-desc">The goal is always the same: make the work look distinct enough to stop attention and polished enough to build trust.</p>
-          </div>
-
-          <div class="process-grid">
-            <article class="process-card">
-              <span class="process-number">01</span>
-              <h3>Creative Direction</h3>
-              <p>I define the mood, hierarchy, and overall visual tone before the design system starts drifting.</p>
-            </article>
-
-            <article class="process-card">
-              <span class="process-number">02</span>
-              <h3>Design Execution</h3>
-              <p>Layouts, typography, and visual elements are built to feel sharp on both screens and campaign assets.</p>
-            </article>
-
-            <article class="process-card">
-              <span class="process-number">03</span>
-              <h3>Refinement</h3>
-              <p>I tighten contrast, spacing, and finishing details so the final output feels deliberate instead of rushed.</p>
-            </article>
-
-            <article class="process-card">
-              <span class="process-number">04</span>
-              <h3>Delivery</h3>
-              <p>You get presentation-ready work built to support launches, socials, websites, and brand storytelling.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section final-cta-section">
-        <div class="container final-cta-content">
-          <h2 class="final-cta-title">
-            Let’s build something your audience <em>won’t ignore.</em>
-          </h2>
-          <p class="final-cta-copy">
-            You’ve built something valuable don’t let poor visuals hide it.
-            Let’s bring your brand to life in a way people can’t ignore.
-          </p>
-          <a
-            class="button button-primary final-cta-button"
-            href="https://wa.me/2348063926498?text=Hi%20YaGazie%2C%20I%20found%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20design%20or%20web%20project.%20Can%20we%20talk%20about%20my%20brand%20and%20next%20steps%3F"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Message on WhatsApp
-          </a>
-          <p class="final-cta-proof">Available for design enquiries</p>
-        </div>
-      </section>
-
-      <section class="support-footer-section" aria-label="Support my work">
-        <div class="container support-footer-inner">
-          <p class="support-label">Support my work <span aria-hidden="true">&rarr;</span></p>
-          <a
-            class="support-button"
-            href="https://paystack.shop/pay/rve2jf962k"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Tip me - $2
-          </a>
+            <div class="steps" aria-label="Process steps">
+              <span>Step 01</span>
+              <span>Step 02</span>
+              <span>Step 03</span>
+              <span>Step 04</span>
+            </div>
+            <a
+              class="contact-button"
+              href="https://wa.me/2348063926498?text=Hi%20YaGazie%2C%20I%20found%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20design%20or%20web%20project.%20Can%20we%20talk%20about%20my%20brand%20and%20next%20steps%3F"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Message on WhatsApp
+            </a>
+          </article>
         </div>
       </section>
     </main>
-
-    <script>
-      const navButton = document.querySelector(".nav-toggle-button");
-      const siteNav = document.querySelector(".site-nav");
-      const navLinks = document.querySelectorAll(".site-nav .nav-link");
-      const hireCards = document.querySelectorAll(".hire-card");
-      const interactiveElements = document.querySelectorAll(
-        ".button, .nav-link, .support-button, .hire-card-summary"
-      );
-
-      interactiveElements.forEach((element) => {
-        const releasePress = () => {
-          element.classList.remove("is-pressed");
-          document.body.classList.remove("page-clicked");
-        };
-
-        element.addEventListener("pointerdown", () => {
-          element.classList.add("is-pressed");
-          document.body.classList.add("page-clicked");
-        });
-
-        element.addEventListener("pointerup", releasePress);
-        element.addEventListener("pointerleave", releasePress);
-        element.addEventListener("blur", releasePress);
-      });
-
-      if (navButton && siteNav) {
-        navButton.addEventListener("click", () => {
-          const isOpen = siteNav.classList.toggle("site-nav-open");
-          navButton.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", () => {
-            siteNav.classList.remove("site-nav-open");
-            navButton.setAttribute("aria-expanded", "false");
-          });
-        });
-      }
-
-      hireCards.forEach((card) => {
-        const summary = card.querySelector(".hire-card-summary");
-        const content = card.querySelector(".hire-card-content");
-
-        if (!summary || !content) {
-          return;
-        }
-
-        if (card.open) {
-          content.style.height = content.scrollHeight + "px";
-        } else {
-          content.style.height = "0px";
-        }
-
-        summary.addEventListener("click", (event) => {
-          event.preventDefault();
-
-          const isOpening = !card.open;
-
-          if (isOpening) {
-            card.open = true;
-            const targetHeight = content.scrollHeight;
-            content.style.height = "0px";
-
-            window.requestAnimationFrame(() => {
-              content.style.height = targetHeight + "px";
-            });
-          } else {
-            const startHeight = content.scrollHeight;
-            content.style.height = startHeight + "px";
-
-            window.requestAnimationFrame(() => {
-              content.style.height = "0px";
-            });
-          }
-        });
-
-        content.addEventListener("transitionend", (event) => {
-          if (event.propertyName !== "height") {
-            return;
-          }
-
-          if (card.open && content.style.height !== "0px") {
-            content.style.height = "auto";
-            return;
-          }
-
-          if (content.style.height === "0px") {
-            card.open = false;
-          }
-        });
-      });
-
-    </script>
   </body>
 </html>
