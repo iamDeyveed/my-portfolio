@@ -1,8 +1,6 @@
-import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { DigitalBuilds } from "@/components/DigitalBuilds";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
 import { IllustrationGrid } from "@/components/IllustrationGrid";
 import { Navbar } from "@/components/Navbar";
 import { ProjectGrid } from "@/components/ProjectGrid";
@@ -42,14 +40,12 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar homeHero />
       <main id="main-content">
-        <Hero />
+        <Contact />
         <ProjectGrid projects={featuredProjects} />
         <IllustrationGrid />
         <DigitalBuilds />
-        <About />
-        <Contact />
       </main>
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

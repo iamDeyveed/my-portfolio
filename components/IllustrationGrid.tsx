@@ -27,7 +27,7 @@ const illustrations = [
 
 export function IllustrationGrid() {
   return (
-    <section className="illustration-section" aria-labelledby="illustration-title">
+    <section id="illustration" className="illustration-section" aria-labelledby="illustration-title">
       <div className="illustration-heading reveal" data-reveal>
         <h2 id="illustration-title">Stories, drawn.</h2>
         <p>Character, color, and ordinary moments turned up loud.</p>

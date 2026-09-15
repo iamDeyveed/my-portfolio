@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Yagazie. I illustrate, design and ship.";
+export const alt = "Yagazie. Let's make something good.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -24,8 +24,8 @@ export default function OpenGraphImage() {
         <span style={{ color: "#145cff" }}>AVAILABLE FOR SELECTED PROJECTS</span>
       </div>
       <div style={{ display: "flex", flexDirection: "column", fontSize: 112, lineHeight: 0.88, letterSpacing: "-7px", fontWeight: 900 }}>
-        <span>I illustrate,</span>
-        <span>design &amp; ship.</span>
+        <span>Let&apos;s make</span>
+        <span>something good.</span>
       </div>
     </div>,
     size,

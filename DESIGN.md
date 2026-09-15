@@ -37,11 +37,12 @@ No rounded cards. Artwork sits in hard-edged fields with intentional crops on in
 
 ## Components
 
-- Navigation: fixed, compact, paper-backed after scrolling, with a visible availability status on larger screens.
+- Navigation: fixed and compact. It begins paper-on-blue over the contact hero, then becomes ink-on-paper after scrolling.
+- Hero: full-viewport signal blue field with one oversized project invitation, direct contact actions, and no supporting image.
 - Project preview: image, title, compact category and year line. Hover reveals a small view cursor and scales the image by no more than 3%.
 - Filter: quiet inline text control with a single underline state.
 - Browser frame: squared browser chrome with restrained controls and no ornamental device shell.
-- Contact: oversized closing statement with direct email and WhatsApp actions.
+- Contact: the opening hero doubles as the conversion point, with direct email and WhatsApp actions.
 
 ## Motion
 

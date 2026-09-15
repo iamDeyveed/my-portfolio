@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     title: "Yagazie | Designer, Illustrator & Builder",
     description:
       "Multidisciplinary designer and illustrator creating brands, illustrations and digital experiences.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Yagazie. I illustrate, design and ship." }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Yagazie. Let's make something good." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Yagazie | Designer, Illustrator & Builder",
-    description: "I illustrate, design and ship.",
+    description: "Let's make something good.",
     images: ["/opengraph-image"],
   },
 };
